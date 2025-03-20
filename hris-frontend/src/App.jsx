@@ -2,6 +2,7 @@ import { Layout, Menu } from "antd";
 import { UserOutlined, HomeOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import EmployeeList from "./pages/EmployeeList";
+import DepartmentList from "./pages/DepartmentList";
 
 const { Header, Sider, Content } = Layout;
 
@@ -20,6 +21,9 @@ function App() {
           <Menu.Item key="employees" icon={<UserOutlined />}>
             Employees
           </Menu.Item>
+          <Menu.Item key="departments" icon={<UserOutlined />}>
+            Departments
+          </Menu.Item>
         </Menu>
       </Sider>
 
@@ -27,8 +31,15 @@ function App() {
       <Layout>
         <Header style={{ background: "#fff", padding: 20 }}>HRIS Admin</Header>
         <Content style={{ margin: "16px" }}>
-          {selectedMenu === "employees" ? <EmployeeList /> : <h2>Welcome to HRIS</h2>}
+          {selectedMenu === "employees" ? (
+            <EmployeeList />
+          ) : selectedMenu === "departments" ? (
+            <DepartmentList />
+          ) : (
+            <h2>Welcome to HRIS</h2>
+          )}
         </Content>
+
       </Layout>
     </Layout>
   );
