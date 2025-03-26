@@ -17,8 +17,8 @@ Sebelum mulai, pastikan kamu sudah menginstal:
 
 **Clone the repository**
    ```bash
-   git clone https://github.com/mangsopa/hris-system.git hris-system
-   cd hris-system
+   git clone https://github.com/mangsopa/crud-express-react.git crud-express-react
+   cd crud-express-react
    ```
 
 ## **Install Backend (Express.js)**
@@ -43,18 +43,13 @@ Sebelum mulai, pastikan kamu sudah menginstal:
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_USER=root
-    DB_PASSWORD=
-    DB_NAME=hris
+    DB_PASSWORD=xxxx
+    DB_NAME=xxxx
    ```
 
 5. Jalankan server backend
    ```bash
    npm run dev
-   ```
-
-8. **Serve the application**
-   ```bash
-   php artisan serve
    ```
 
 ## **Install Frontend (React.js)**
@@ -78,7 +73,7 @@ Sebelum mulai, pastikan kamu sudah menginstal:
 
 1. Buka MySQL dan buat database:
    ```bash
-   CREATE DATABASE hris;
+   CREATE DATABASE crud-express-react;
    ```
 
 2. Jalankan migrasi database (jika ada)
